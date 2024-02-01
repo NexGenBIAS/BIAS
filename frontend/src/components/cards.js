@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import QuestionbankCard from './questionbank-card';
 import ExperimentCard from './experiment-card';
 import AssignmentCard from './assignment-card';
+import AddButton from './add-button';
 
 const Cards = ({ selectedSubject, selectedCategory }) => {
   const [assignments, setAssignments] = useState({});
@@ -52,9 +53,11 @@ const Cards = ({ selectedSubject, selectedCategory }) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <h2 className="text-2xl font-bold mb-4 text-center">{`${selectedSubject.toUpperCase()}`}</h2>
+      <AddButton/>
       {renderContent()}
+      
     </div>
   );
 };

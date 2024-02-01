@@ -186,7 +186,7 @@ const AddAssignment = () => {
                 onChange={handleAssignmentNumberChange}
                 required
             />
-            <div className='flex flex-col md:flex-row justify-center w-full gap-12 '>
+            <div className='flex flex-col md:flex-row justify-center w-[80%] gap-6 '>
 
                 <div className='text-center flex flex-col md:flex-row  gap-2 '>
 
