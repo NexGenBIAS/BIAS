@@ -2,7 +2,9 @@ import React from 'react'
 
 const EditAssignment = () => {
   return (
-    <div>EditAssignment12312</div>
+    <div>
+      Test
+    </div>
   )
 }
 
