@@ -40,8 +40,9 @@ const Navbar = () => {
   return (
     <nav className='bg-primary text-primary shadow-[0_3px_10px_rgb(0,0,0,0.2)] '>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto padding-container py-6'>
-        <Link to='/home'>
+        <Link to='/home' className='relative'>
           <h1 className='font-bold italic md:text-4xl  text-2xl  ' onClick={handleLogoClick}>BIAS</h1>
+          <p className='text-xs absolute bottom-[-5px] right-[-25px] text-white z-10 bg-blue-900 px-1 py-[0.150rem] border-white border rounded-md'>Beta</p>
         </Link>
 
         <button

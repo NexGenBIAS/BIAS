@@ -83,22 +83,6 @@ select {
 }
 
 
-@keyframes changeColor {
-  0% {
-    background-color:  ; /* Initial color */
-  }
-  50% {
-    background-color: ; /* Intermediate color */
-  }
-  100% {
-    background-color:  ; /* Final color, same as initial for a smooth transition */
-  }
-}
-
-.changeColor {
-  animation: changeColor 2s infinite;
-
-}
 
 input {
   color-scheme: dark;
