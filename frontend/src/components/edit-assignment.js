@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import "./default.css";
 import "./edit-assignment.css";
-import "./default.css"
 import "highlight.js/styles/github-dark.css";
 import hljs from "highlight.js";
 import { marked } from "marked";
