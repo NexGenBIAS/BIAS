@@ -35,12 +35,14 @@ textarea {
     color: white;
 }
 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) and (max-width: 768px) {
     /* For mobile phones: */
 
     .edit-assignment-container {
-        width: 90%;
+        width: 96%;
+        border: 2px solid #66fcf1;
+
+        
     }
 
    .html-preview {

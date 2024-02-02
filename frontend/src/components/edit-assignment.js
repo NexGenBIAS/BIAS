@@ -22,7 +22,7 @@ function App() {
 
   # BIAS
   
-  BIAS is a Bot for Instant Assignment Solving.
+  BIAS is a Bot for Instant Assignment Solutions.
   
   
   Link : http://65.0.14.141/
