@@ -36,6 +36,21 @@ textarea {
 }
 
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .edit-assignment-container {
+        width: 90%;
+    }
+
+   .html-preview {
+    width: 100%;
+    margin: 0;
+   }
+   .markdown-editor {
+    display: none;
+   }
+  }
 
 
   
