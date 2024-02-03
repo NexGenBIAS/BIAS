@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./default.css";
 import "./edit-assignment.css";
 import "highlight.js/styles/github-dark.css";
@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 // import { mdToPdf } from "md-to-pdf";
 
 const renderer = new marked.Renderer();
+const MathJax = window.MathJax;
 
 renderer.code = function (code, language) {
   const highlighted = hljs.highlightAuto(code).value;
@@ -22,6 +23,7 @@ function EditAssignment() {
   const { subjectPrefix, assignmentNumber } = useParams();
   const [text, setText] = useState("");
   const [markdown, setMarkdown] = useState("");
+  const htmlPreviewRef = useRef(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -49,6 +51,18 @@ function EditAssignment() {
     setMarkdown(marked(event.target.value));
   }
 
+  useEffect(() => {
+    if (htmlPreviewRef.current) {
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = markdown;
+      MathJax.typesetPromise([tempDiv]).then(() => {
+        htmlPreviewRef.current.innerHTML = tempDiv.innerHTML;
+      }).catch((err) => {
+        console.error(err.message);
+      });
+    }
+  }, [markdown]);
+
   const handleKeyDown = (event) => {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -73,7 +87,7 @@ function EditAssignment() {
   return (
     <div className="edit-assignment-container">
       <textarea className="markdown-editor" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
-      <div className="html-preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
+      <div ref={htmlPreviewRef} className="html-preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
       <div className="button-container">
         <button /*onClick={convertToPdf}*/>Convert to PDF</button>
       </div>
