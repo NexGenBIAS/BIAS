@@ -9,13 +9,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    border: 6px solid greenyellow;
+    border: 6px solid #66fcf1;
 }
 .markdown-editor, .html-preview {
     width: 50%;
-    height: 100%;
+    height: 90%;
     box-sizing: border-box;
-    border: 3px solid yellowgreen;
+    border: 3px solid #66fcf1;
 }
 .html-preview {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -35,24 +35,37 @@ textarea {
     color: white;
 }
 
+textarea:focus {
+    outline: none;
+}
+
+.button-container {
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.button-container button {
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 600px) and (max-width: 768px) {
     /* For mobile phones: */
 
     .edit-assignment-container {
         width: 96%;
         border: 2px solid #66fcf1;
-
-        
     }
 
-   .html-preview {
-    width: 100%;
-    margin: 0;
-   }
-   .markdown-editor {
-    display: none;
-   }
-  }
-
-
-  
+    .html-preview {
+        width: 100%;
+        margin: 0;
+    }
+    .markdown-editor {
+        display: none;
+    }
+}

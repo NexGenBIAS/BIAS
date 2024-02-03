@@ -74,7 +74,9 @@ function EditAssignment() {
     <div className="edit-assignment-container">
       <textarea className="markdown-editor" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
       <div className="html-preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
-      {/* <button onClick={convertToPdf}>Convert to PDF</button> */}
+      <div className="button-container">
+        <button /*onClick={convertToPdf}*/>Convert to PDF</button>
+      </div>
     </div>
   );
 }
