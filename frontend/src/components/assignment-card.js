@@ -17,9 +17,9 @@ const AssignmentCard = ({ assignments }) => {
   }
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex sm:flex-row gap-1 flex-col">
       {Object.entries(assignments).map(([key, assignment]) => (
-        <div key={assignment.number} className="mb-4 md:ml-2 p-8 rounded-md bg-secondary text-secondary w-full md:w-1/2 lg:w-1/2 xl:w-1/3 gap-2 flex flex-col transition">
+        <div key={assignment.number} className="mb-4  p-8 rounded-md bg-secondary text-secondary w-full md:w-1/2 lg:w-1/2 xl:w-1/3 gap-2 flex flex-col transition">
           <div className='justify-between flex border-b-2 border-gray-550 items-center pb-2 relative'>
 
             <h3 className="text-xl font-bold text-primary">{`Assignment ${assignment.number}`}</h3>
