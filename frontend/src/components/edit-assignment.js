@@ -25,7 +25,7 @@ function EditAssignment() {
   const [text, setText] = useState("");
   const [markdown, setMarkdown] = useState("");
   const htmlPreviewRef = useRef(null);
-  const [loading, setLoading] = useState(true);
+ 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +40,7 @@ function EditAssignment() {
       } catch (error) {
         console.error("Fetch error:", error.message);
       } finally {
-        setLoading(false);
+        
       }
     };
 
