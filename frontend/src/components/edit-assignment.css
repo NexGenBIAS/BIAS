@@ -2,26 +2,27 @@
     display: flex;
     aspect-ratio: 2 / 1;
     width: 80%;
-    height: 80vh;
+    height: 75vh;
     margin: auto;
     position: relative;
     top: 1;
     right: 0;
     bottom: 0;
     left: 0;
-    border: 6px solid #66fcf1;
+    /* border: 2px solid #66fcf1; */
 }
 .markdown-editor, .html-preview {
-    width: 50%;
+    
     height: 90%;
     box-sizing: border-box;
-    border: 3px solid #66fcf1;
+    /* border: 1px solid #66fcf1; */
 }
 .html-preview {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     overflow-y: scroll;
     overflow-x: hidden;
     overflow-wrap: break-word;
+    
     word-wrap: break-word;
     padding: 10px;
     background-color: white;
@@ -31,7 +32,7 @@ textarea {
     font-size: 16px;
     font-family: "Courier New", Courier, monospace;
     resize: none;
-    background-color: #0d1117;
+    background-color: #1F2833;
     color: white;
 }
 
@@ -39,19 +40,7 @@ textarea:focus {
     outline: none;
 }
 
-.button-container {
-    height: 10%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
 
-.button-container button {
-    width: 100%;
-    height: 100%;
-}
 
 @media only screen and (max-width: 600px) and (max-width: 768px) {
     /* For mobile phones: */

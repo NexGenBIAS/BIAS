@@ -78,24 +78,24 @@ function EditAssignment() {
     }
   };
 
-  // const convertToPdf = async () => {
-  //   try {
-  //     const pdf = await mdToPdf({ content: markdown });
-  //     fs.writeFileSync("Output.pdf", pdf.content);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // }
 
 
   return (
-    <div className="edit-assignment-container">
-      <textarea className="markdown-editor" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
-      <div ref={htmlPreviewRef} className="html-preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
-      <div className="button-container">
-        <button /*onClick={convertToPdf}*/>Convert to PDF</button>
+    <div className="flex flex-col  justify-center items-center ">
+      <div className="edit-assignment-container rounded-sm ">
+        <div className="relative w-1/2">
+
+        <textarea className="markdown-editor p-4 w-full" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
+        <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">?</div>
+        </div>
+        <div ref={htmlPreviewRef} className="html-preview w-1/2 " dangerouslySetInnerHTML={{ __html: markdown }}></div>
+        
+      </div>
+      <div className="button-container mb-4">
+        <button /*onClick={convertToPdf}*/ className="bg-secondary text-white hover:text-primary px-10 py-4 rounded-md ">Convert to PDF</button>
       </div>
     </div>
+
   );
 }
 
