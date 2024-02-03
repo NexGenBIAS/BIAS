@@ -40,6 +40,7 @@ const AddAssignment = () => {
     const [dateGiven, setDateGiven] = useState('');
     const [dateSubmission, setDateSubmission] = useState('NIL');
     const [key, setKey] = useState('');
+    const [batch, setBatch] = useState('B1'); 
 
     const onDrop = useCallback(async (acceptedFiles) => {
         setDroppedFiles(acceptedFiles);
@@ -83,8 +84,10 @@ const AddAssignment = () => {
                 number: assignmentNumber,
                 qs: validQuestions,
                 username: userName,
-                type: assignmentType,
-                authKey: key
+                type: assignmentType === 'experiment' ? `experiment${batch.toLowerCase()}` : assignmentType,
+                authKey: key,
+                givendate: dateGiven,
+                submissiondate: dateSubmission,
             });
 
             if (generateResponse.success) {
@@ -126,6 +129,10 @@ const AddAssignment = () => {
     const handleKeyChange = (event) => {
         setKey(event.target.value)
     }
+
+    const handleBatchChange = (event) => {
+        setBatch(event.target.value);
+    };
 
     return (
         <form className='flex flex-col  justify-center align-middle gap-4 items-center mt-4 w-[80%] mx-auto text-secondary'>
@@ -169,15 +176,24 @@ const AddAssignment = () => {
                 </div>
             </div>
 
-            {
-                assignmentType === 'experiment' && (
-                    <div>
-                        {/* batch */}
-                    </div>
-                )
-            }
-
-            <label htmlFor='number'>Assignment Number</label>
+            {assignmentType === 'experiment' && (
+                <div className='text-center flex flex-col md:flex-row  gap-2'>
+                    <label htmlFor='batch' className='self-center'>Batch: </label>
+                    <select
+                        className='bg-secondary px-8 py-4 rounded-lg'
+                        value={batch}
+                        onChange={handleBatchChange}
+                        id='batch'
+                        required
+                    >
+                        <option value='B1'>B1</option>
+                        <option value='B2'>B2</option>
+                        <option value='B3'>B3</option>
+                    </select>
+                </div>
+            )}
+            {assignmentType === 'experiment' ? <label htmlFor='number'>Experiment Number</label> : <label htmlFor='number'>Assignment Number</label>}
+            
             <input
                 type='number'
                 id='number'
