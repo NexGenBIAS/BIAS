@@ -34,7 +34,7 @@ const AddUser = () => {
         type="text"
         id="name"
         value={name}
-        className='bg-primary px-8 py-4 rounded-xl'
+        className='bg-secondary px-8 py-4 rounded-xl'
         onChange={(e) => setName(e.target.value)}
       />
       <button onClick={handleAddUser} className='bg-secondary border-2 border-gray-950 p-2 rounded-md'>Enter</button>

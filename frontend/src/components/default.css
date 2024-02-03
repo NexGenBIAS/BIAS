@@ -1,320 +1,352 @@
 .html-preview h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-  
-   .html-preview hr {
-    box-sizing: content-box; /* 1 */
-    height: 0; /* 1 */
-    overflow: visible; /* 2 */
-  }
-  
-   .html-preview pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  
-   .html-preview a {
-    background-color: transparent;
-  }
-  
-   .html-preview abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
-  }
-  
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
-   .html-preview b,
-  .html-preview strong {
-    font-weight: bolder;
-  }
-  
-  
-   .html-preview code,
-  kbd,
-  samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  
-  
-  
-   .html-preview small {
-    font-size: 80%;
-  }
-  
+.html-preview hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
 
-   .html-preview sub,
-  .html-preview sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  
-  .html-preview sub {
-    bottom: -0.25em;
-  }
-  
-  .html-preview sup {
-    top: -0.5em;
-  }
-  
-  /* Embedded content
+.html-preview pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+.html-preview a {
+  background-color: transparent;
+}
+
+.html-preview abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+
+.html-preview b,
+.html-preview strong {
+  font-weight: bolder;
+}
+
+
+.html-preview code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+
+
+.html-preview small {
+  font-size: 80%;
+}
+
+
+.html-preview sub,
+.html-preview sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.html-preview sub {
+  bottom: -0.25em;
+}
+
+.html-preview sup {
+  top: -0.5em;
+}
+
+/* Embedded content
      ========================================================================== */
-  
-  /**
+
+/**
    * Remove the border on images inside links in IE 10.
    */
-  
-   .html-preview img {
-    border-style: none;
-  }
-  
-  /* Forms
+
+.html-preview img {
+  border-style: none;
+}
+
+/* Forms
      ========================================================================== */
-  
-  /**
+
+/**
    * 1. Change the font styles in all browsers.
    * 2. Remove the margin in Firefox and Safari.
    */
-  
-   .html-preview button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
-  }
-  
-  /**
+
+.html-preview button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.
    */
-  
-   .html-preview button,
-  input { /* 1 */
-    overflow: visible;
-  }
-  
-  /**
+
+.html-preview button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
    * 1. Remove the inheritance of text transform in Firefox.
    */
-  
-    .html-preview button,
-  select { /* 1 */
-    text-transform: none;
-  }
-  
-  /**
+
+.html-preview button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
    * Correct the inability to style clickable types in iOS and Safari.
    */
-  
-   .html-preview  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
-  
-  /**
+
+.html-preview button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
    * Remove the inner border and padding in Firefox.
    */
-  
-   .html-preview button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-  
-  /**
+
+.html-preview button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
    * Restore the focus styles unset by the previous rule.
    */
-  
-   .html-preview button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-  
-  /**
+
+.html-preview button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
    * Correct the padding in Firefox.
    */
-  
-   .html-preview fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
-  
-  /**
+
+.html-preview fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
    * 1. Correct the text wrapping in Edge and IE.
    * 2. Correct the color inheritance from `fieldset` elements in IE.
    * 3. Remove the padding so developers are not caught out when they zero out
    *    `fieldset` elements in all browsers.
    */
-  
-   .html-preview  legend {
-    box-sizing: border-box; /* 1 */
-    color: inherit; /* 2 */
-    display: table; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 3 */
-    white-space: normal; /* 1 */
-  }
-  
-  /**
+
+.html-preview legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
-  
-   .html-preview  progress {
-    vertical-align: baseline;
-  }
-  
-  /**
+
+.html-preview progress {
+  vertical-align: baseline;
+}
+
+/**
    * Remove the default vertical scrollbar in IE 10+.
    */
-  
-   .html-preview  textarea {
-    overflow: auto;
-  }
-  
-  /**
+
+.html-preview textarea {
+  overflow: auto;
+}
+
+/**
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-  
-  [type="checkbox"],
-  [type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-  }
-  
-  /**
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-  
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-  
-  /**
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-  
-  [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-  }
-  
-  /**
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-  
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  
-  /**
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
    * 1. Correct the inability to style clickable types in iOS and Safari.
    * 2. Change font properties to `inherit` in Safari.
    */
-  
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
-  }
-  
-  /* Interactive
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
      ========================================================================== */
-  
-  /*
+
+/*
    * Add the correct display in Edge, IE 10+, and Firefox.
    */
-  
-   .html-preview  details {
-    display: block;
-  }
-  
-  /*
+
+.html-preview details {
+  display: block;
+}
+
+/*
    * Add the correct display in all browsers.
    */
-  
-   .html-preview summary {
-    display: list-item;
-  }
-  
-  /* Misc
+
+.html-preview summary {
+  display: list-item;
+}
+
+/* Misc
      ========================================================================== */
-  
-  /**
+
+/**
    * Add the correct display in IE 10+.
    */
-  
-  .html-preview template {
-    display: none;
-  }
-  
-  /**
+
+.html-preview template {
+  display: none;
+}
+
+/**
    * Add the correct display in IE 10.
    */
-  
-  [hidden] {
-    display: none;
-  }
+
+[hidden] {
+  display: none;
+}
 
 
-  .html-preview h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+.html-preview h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-.html-preview h3 { 
-    display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+
+.html-preview h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-.html-preview h4 { 
-    display: block;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+
+.html-preview h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-.html-preview h5 { 
-    display: block;
-    font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+
+.html-preview h5 {
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-.html-preview h6 { 
-    display: block;
-    font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+
+.html-preview h6 {
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 .html-preview p {
@@ -383,6 +415,7 @@
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
 }
+
 .html-preview h2 {
   display: block !important;
   font-weight: bold !important;
@@ -392,6 +425,7 @@
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
 }
+
 .html-preview h3 {
   display: block !important;
   font-weight: bold !important;
@@ -401,6 +435,7 @@
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
 }
+
 .html-preview h6 {
   display: block !important;
   font-weight: bold !important;
@@ -410,6 +445,7 @@
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
 }
+
 .html-preview table {
   display: table !important;
   box-sizing: border-box !important;
@@ -418,30 +454,37 @@
   text-indent: initial !important;
   border-color: gray !important;
 }
+
 .html-preview tr {
   display: table-row !important;
   border-color: inherit !important;
   vertical-align: inherit !important;
 }
+
 .html-preview td {
   display: table-cell !important;
   padding: 1px !important;
   vertical-align: inherit !important;
 }
+
 .html-preview u {
   text-decoration: underline !important;
 }
+
 .html-preview a {
   color: #0000EE !important;
   text-decoration: underline !important;
   cursor: pointer !important;
 }
+
 .html-preview a:active {
   color: #FF0000 !important;
 }
+
 .html-preview a:visited {
   color: #551A8B !important;
 }
+
 .html-preview pre {
   border-radius: 0.5rem !important;
   padding: 1rem !important;
@@ -457,60 +500,65 @@
   white-space: pre-wrap;
 
 }
-.html-preview table td, table th,table tr {
-    background-color: transparent !important;
-    border-left: 4px solid #e6e9ec !important;
-    border-bottom: 4px solid #e6e9ec !important;
-    border-right: 4px solid #e6e9ec !important;
-    border-top: 4px solid #e6e9ec !important;
-    font-size: inherit !important;
-    margin: 0 !important;
-    overflow: visible !important;
-    padding: 5px !important;
-    font-weight: 600 !important;
+
+.html-preview table td,
+table th,
+table tr {
+  background-color: transparent !important;
+  border-left: 4px solid #e6e9ec !important;
+  border-bottom: 4px solid #e6e9ec !important;
+  border-right: 4px solid #e6e9ec !important;
+  border-top: 4px solid #e6e9ec !important;
+  font-size: inherit !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  padding: 5px !important;
+  font-weight: 600 !important;
 }
 
-.html-preview tr{
-    background-color: transparent !important;
-    border-left: 4px solid #e6e9ec !important;
-    border-bottom: 4px solid #e6e9ec !important;
-    font-size: inherit !important;
-    margin: 0 !important;
-    overflow: visible !important;
-    padding: 5px !important;
-    font-weight: 600 !important;
+.html-preview tr {
+  background-color: transparent !important;
+  border-left: 4px solid #e6e9ec !important;
+  border-bottom: 4px solid #e6e9ec !important;
+  font-size: inherit !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  padding: 5px !important;
+  font-weight: 600 !important;
 
 }
+
 .html-preview .alignleft {
-    float: left;
-    margin: 0 1em 0 0;
-}
-.html-preview .ytp-cued-thumbnail-overlay-image {
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.html-preview .html5-video-player {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    outline: 0;
-    font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
-    color: #eee;
-    text-align: left;
-    direction: ltr;
-    font-size: 11px;
-    line-height: 1.3;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    touch-action: manipulation;
-    -ms-high-contrast-adjust: none;
+  float: left;
+  margin: 0 1em 0 0;
 }
 
+.html-preview .ytp-cued-thumbnail-overlay-image {
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.html-preview .html5-video-player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  outline: 0;
+  font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+  color: #eee;
+  text-align: left;
+  direction: ltr;
+  font-size: 11px;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+  -ms-high-contrast-adjust: none;
+}
