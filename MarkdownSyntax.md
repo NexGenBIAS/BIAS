@@ -31,7 +31,7 @@ Text
 ```
 
 ## H3 Tag
-### Markdown Syntax 1:
+### Markdown Syntax:
 ```
 ### Text
 ```
@@ -41,7 +41,7 @@ Text
 ```
 
 ## H4 Tag
-### Markdown Syntax 1:
+### Markdown Syntax:
 ```
 #### Text
 ```
@@ -51,7 +51,7 @@ Text
 ```
 
 ## H5 Tag
-### Markdown Syntax 1:
+### Markdown Syntax:
 ```
 ##### Text
 ```
@@ -61,7 +61,7 @@ Text
 ```
 
 ## H6 Tag
-### Markdown Syntax 1:
+### Markdown Syntax:
 ```
 ###### Text
 ```
