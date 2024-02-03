@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 const renderer = new marked.Renderer();
 const MathJax = window.MathJax;
 
+// Code Block Highlighting
 renderer.code = function (code, language) {
   const highlighted = hljs.highlightAuto(code).value;
   return `<pre><code class="hljs ${language} ">${highlighted}</code></pre>`;
@@ -46,11 +47,13 @@ function EditAssignment() {
     fetchData();
   }, [subjectPrefix, assignmentNumber]);
 
+  // Convert Markdown to HTML
   const handleChange = (event) => {
     setText(event.target.value);
     setMarkdown(marked(event.target.value));
   }
 
+  // LaTeX
   useEffect(() => {
     if (htmlPreviewRef.current) {
       const tempDiv = document.createElement("div");
@@ -63,6 +66,7 @@ function EditAssignment() {
     }
   }, [markdown]);
 
+  // Handling the Tab key
   const handleKeyDown = (event) => {
     if (event.key === "Tab") {
       event.preventDefault();
