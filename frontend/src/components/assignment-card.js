@@ -17,10 +17,10 @@ const AssignmentCard = ({ assignments }) => {
   }
 
   return (
-    <div className="flex sm:flex-row gap-1 flex-col">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
       {Object.entries(assignments).map(([key, assignment]) => (
-        <div key={assignment.number} className="mb-4  p-8 rounded-md bg-secondary text-secondary w-full md:w-1/2 lg:w-1/2 xl:w-1/3 gap-2 flex flex-col transition">
-          <div className='justify-between flex border-b-2 border-gray-550 items-center pb-2 relative'>
+        <div key={assignment.number} className="p-8 rounded-md bg-secondary text-secondary w-full flex flex-col transition mb-4 ">
+          <div className='justify-between flex border-b-2 border-gray-550 items-center pb-2 mb-2 relative'>
 
             <h3 className="text-xl font-bold text-primary">{`Assignment ${assignment.number}`}</h3>
             <HiOutlineDotsVertical className='text-xl hover:cursor-pointer text-primary' onClick={() => handleEditClick(key)} />
@@ -51,6 +51,8 @@ const AssignmentCard = ({ assignments }) => {
           </div>
         </div>
       ))}
+      
+      
     </div>
   );
 };
