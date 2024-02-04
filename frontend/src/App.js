@@ -1,5 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/home';
+import About from './pages/about';
 import Navbar from './components/navbar';
 import AddAssignment from './components/add-assignment';
 import { UserContext } from './context/userContextProvider';
@@ -25,8 +26,9 @@ function App() {
               <>
                 <Route path="/" element={<AddUser />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/add-assignment" element={<AddAssignment />} />
-                <Route path="/edit-assignment/:subjectPrefix/:assignmentNumber" element={<EditAssignment/>} />
+                <Route path="/edit-assignment/:subjectPrefix/:assignmentNumber" element={<EditAssignment />} />
               </>
             )}
           </Routes>

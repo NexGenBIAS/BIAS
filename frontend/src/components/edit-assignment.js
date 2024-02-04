@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./default.css";
+import "./default-edit-assignment.css";
 import "./edit-assignment.css";
 import "highlight.js/styles/github-dark.css";
 import hljs from "highlight.js";
