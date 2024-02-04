@@ -23,7 +23,7 @@ const About = () => {
             </p>
 
             <h2>What We Offer</h2>
-            <table style={{ borderCollapse: "collapse", border: "none" }}>
+            <table>
                 <tbody>
                     {wwoData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -39,7 +39,7 @@ const About = () => {
             <p>
                 BIAS is developed and maintained by a team of dedicated computer science professionals and AI experts passionate about enhancing the educational experience for CSE students. Meet the minds behind our platform:
             </p>
-            <table style={{ borderCollapse: "collapse", border: "none" }}>
+            <table>
                 <tbody>
                     {otData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
