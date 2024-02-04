@@ -16,7 +16,8 @@ const About = () => {
 
     return (
         <div className="about" style={{ margin: "0 10% 50px 10%", textAlign: "justify" }}>
-            <h1><center>About BIAS (<u>B</u>ot for <u>I</u>nstant <u>A</u>ssignment <u>S</u>olutions)</center></h1>
+            <h1><center>About BIAS</center></h1>
+            <h2><center>(<u>B</u>ot for <u>I</u>nstant <u>A</u>ssignment <u>S</u>olutions)</center></h2>
             <h2>Our Mission</h2>
             <p>
                 BIAS is dedicated to revolutionizing the way computer science and engineering (CSE) students learn and complete assignments and experiments. Our mission is to provide a platform powered by artificial intelligence (AI) that offers accurate and comprehensive solutions to CSE problems, empowering students to learn effectively and excel in their studies.
