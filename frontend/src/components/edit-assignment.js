@@ -88,7 +88,7 @@ function EditAssignment() {
 
       </div>
       <div className="button-container mb-4">
-        <button /*onClick={convertToPdf}*/ className="bg-secondary text-white hover:text-primary px-10 py-4 rounded-md ">Convert to PDF</button>
+        <button /*onClick={convertToPdf}*/ className="bg-secondary text-white hover:text-primary px-10 py-4 rounded-md transform translate-y-[-30px]">Convert to PDF</button>
       </div>
     </div>
   );
