@@ -20,12 +20,10 @@ marked.setOptions({ renderer });
 
 function EditAssignment() {
 
-
   const { subjectPrefix, assignmentNumber } = useParams();
   const [text, setText] = useState("");
   const [markdown, setMarkdown] = useState("");
   const htmlPreviewRef = useRef(null);
- 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +38,7 @@ function EditAssignment() {
       } catch (error) {
         console.error("Fetch error:", error.message);
       } finally {
-        
+
       }
     };
 
@@ -78,24 +76,21 @@ function EditAssignment() {
     }
   };
 
-
-
   return (
     <div className="flex flex-col  justify-center items-center ">
       <div className="edit-assignment-container rounded-sm ">
         <div className="relative w-1/2">
 
-        <textarea className="markdown-editor p-4 w-full" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
-        <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">?</div>
+          <textarea className="markdown-editor p-4 w-full" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
+          <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">?</div>
         </div>
         <div ref={htmlPreviewRef} className="html-preview w-1/2 " dangerouslySetInnerHTML={{ __html: markdown }}></div>
-        
+
       </div>
       <div className="button-container mb-4">
         <button /*onClick={convertToPdf}*/ className="bg-secondary text-white hover:text-primary px-10 py-4 rounded-md ">Convert to PDF</button>
       </div>
     </div>
-
   );
 }
 

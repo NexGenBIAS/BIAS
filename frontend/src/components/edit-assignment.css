@@ -11,12 +11,14 @@
     left: 0;
     /* border: 2px solid #66fcf1; */
 }
+
 .markdown-editor, .html-preview {
     
     height: 90%;
     box-sizing: border-box;
     /* border: 1px solid #66fcf1; */
 }
+
 .html-preview {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     overflow-y: scroll;
@@ -28,6 +30,7 @@
     background-color: white;
     color: black;
 }
+
 textarea {
     font-size: 16px;
     font-family: "Courier New", Courier, monospace;
@@ -40,11 +43,8 @@ textarea:focus {
     outline: none;
 }
 
-
-
 @media only screen and (max-width: 600px) and (max-width: 768px) {
     /* For mobile phones: */
-
     .edit-assignment-container {
         width: 96%;
         border: 2px solid #66fcf1;
