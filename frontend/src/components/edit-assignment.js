@@ -28,7 +28,7 @@ function EditAssignment() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://65.0.14.141:4000/api/viewmd/${subjectPrefix}/${assignmentNumber}`);
+        const response = await fetch(`http://65.0.14.141:4000/api/viewmd/${subjectPrefix}/${subjectPrefix + assignmentNumber}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
