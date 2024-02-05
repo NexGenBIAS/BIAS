@@ -1,5 +1,18 @@
 # A Guide on how to edit the Assignment/Experiment
 
+## Quick Links
+### [Headings](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#headings)
+- [h1](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h1-tag) [h2](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h2-tag) [h3](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h3-tag) [h4](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h4-tag) [h5](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h5-tag) [h6](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#h6-tag)
+
+### [Text Highlighting](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#text-highlighting)
+- [Bold/strong](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#boldstrong)
+- [Italics/Emphasis](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#italicsemphasis)
+
+### [Blockquote](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#blockquote)
+- [Normal Blockquote](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#normal-blockquote)
+- [Multi-paragraph Blockquote](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#multi-paragraph-blockquote)
+- [Nested Blockquote](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#nested-blockquote)
+
 ## Headings
 ### H1 Tag
 #### Markdown Syntax 1:
