@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
+  content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-          ],
-    theme: {
+  ],
+  theme: {
     extend: {
       colors: {
         gray: {
@@ -17,7 +17,7 @@ module.exports = {
           750: '#45A29E', // border
           650: '#C5C6C7', // text secondary
           550: '#66FCF1', // text primary
-          450: '#07f5e3', // text teriary
+          450: '#07f5e3', // text tertiary
         }
       },
       screens: {
