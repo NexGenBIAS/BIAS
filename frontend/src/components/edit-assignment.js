@@ -4,7 +4,7 @@ import "./edit-assignment.css";
 import "highlight.js/styles/github-dark.css";
 import hljs from "highlight.js";
 import { marked } from "marked";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 // import { mdToPdf } from "md-to-pdf";
 
 const renderer = new marked.Renderer();
@@ -76,21 +76,28 @@ function EditAssignment() {
     }
   };
 
+  // Link to the Guide for using the markdown-editor
+  const handleHelpButtonClick = () => {
+    window.open("https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md", "_blank");
+  };
+
   return (
     <div className="flex flex-col  justify-center items-center ">
       <div className="edit-assignment-container rounded-sm ">
         <div className="relative w-1/2">
 
           <textarea className="markdown-editor p-4 w-full" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
-          <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">?</div>
+          <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">
+            <button className="help-button" onClick={handleHelpButtonClick}>?</button>
+          </div>
         </div>
         <div ref={htmlPreviewRef} className="html-preview w-1/2 " dangerouslySetInnerHTML={{ __html: markdown }}></div>
 
-      </div>
+      </div >
       <div className="button-container mb-4">
         <button /*onClick={convertToPdf}*/ className="bg-secondary text-white hover:text-primary px-10 py-4 rounded-md transform translate-y-[-30px]">Convert to PDF</button>
       </div>
-    </div>
+    </div >
   );
 }
 
