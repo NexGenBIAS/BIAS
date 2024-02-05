@@ -1,7 +1,7 @@
 
 # BIAS
 
-BIAS is a Bot for Instant Assignment Solving.
+BIAS is a Bot for Instant Assignment Solutions.
 
 
 Link : http://65.0.14.141/
@@ -20,7 +20,7 @@ It uses multiple AIs to generate textual answers for the given questions and giv
 - View Submission Dates
 - Variety of assignments available
 - Download Notes/Assignments or view it on webapp itself
-- Working on more.
+- On-site PDF editor
 
 
 ## FAQ
