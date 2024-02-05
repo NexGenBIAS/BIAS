@@ -4,7 +4,7 @@ import "./edit-assignment.css";
 import "highlight.js/styles/github-dark.css";
 import hljs from "highlight.js";
 import { marked } from "marked";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import { mdToPdf } from "md-to-pdf";
 
 const renderer = new marked.Renderer();
