@@ -20,6 +20,12 @@
 - [Ordered List Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#ordered-list) | [Nested Ordered List Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#nested-ordered-list)
 - [Unordered List Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#unordered-list) | [Nested Unordered List Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#nested-unordered-list)
 
+### [Code Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#code)
+- [Word/Phrase as Code Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#wordphrase-as-code)
+- [Fenced Code Block Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#fenced-code-blocks)
+
+### [Image Syntax](https://github.com/NexGenBIAS/BIAS/blob/master/MarkdownSyntax.md#images)
+
 ## Headings
 ### H1 Tag
 #### Markdown Syntax 1:
@@ -250,6 +256,12 @@ Item N
     <li>Item N</li>
 </ul>
 ```
+> **TIP:** You can use different item markers using HTML (`<ul style="list-style-type:<type>;">...</ul>`)\
+> The different types available are:
+> - `disc`: Sets the list item marker to a bullet (default)
+> - `circle`: Sets the list item marker to a circle
+> - `square`: Sets the list item marker to a square
+> - `none`: The list items will not be marked
 ### Nested Unordered List
 #### Markdown Syntax:
 ```
@@ -275,3 +287,29 @@ Item N
     <li>Item N</li>
 </ul>
 ```
+
+## Code
+### Word/Phrase as Code
+#### Markdown Syntax:
+```
+`Text`
+```
+> **TIP:** To include a single or multiple ``(`)`` in a code segment, use `(``)` to enclose the text\
+> Example:
+> ```
+> ``Use `code` in your Markdown file.``
+> ```
+#### HTML Syntax:
+```
+<code>Text</code>
+```
+### Fenced Code Blocks
+#### Markdown Syntax:
+~~~
+```
+Text
+```
+~~~
+> **TIP:** You can also use `~~~` instead of ``(```)`` for fenced code blocks
+
+> **NOTE:** Use backticks ``(`)`` and not apostrophes `(')`
