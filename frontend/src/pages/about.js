@@ -13,9 +13,9 @@ const About = () => {
 
             <h2>What We Offer</h2>
             <ul className="text-white">
-                <li><strong>AI-Powered Solutions:</strong> Our platform utilizes cutting-edge AI technology to generate precise and high-quality solutions to a wide range of CSE assignments and experiments.</li>
-                <li><strong>Editable Solutions:</strong> Users have the flexibility to edit and customize the generated solutions according to their specific requirements, ensuring personalized learning experiences.</li>
-                <li><strong>PDF Downloads:</strong> Once customized, users can easily download their edited solutions in PDF format, making it convenient to access and reference offline.</li>
+                <li><strong className='inline-block text-left'>AI-Powered Solutions:</strong> Our platform utilizes cutting-edge AI technology to generate precise and high-quality solutions to a wide range of CSE assignments and experiments.</li>
+                <li><strong className='inline-block text-left'>Editable Solutions:</strong> Users have the flexibility to edit and customize the generated solutions according to their specific requirements, ensuring personalized learning experiences.</li>
+                <li><strong className='inline-block text-left'>PDF Downloads:</strong> Once customized, users can easily download their edited solutions in PDF format, making it convenient to access and reference offline.</li>
             </ul>
 
             <h2>Our Team</h2>
@@ -23,9 +23,9 @@ const About = () => {
                 BIAS is developed and maintained by a team of dedicated computer science professionals and AI experts passionate about enhancing the educational experience for CSE students. Meet the minds behind our platform:
             </p>
             <ul className="text-white">
-                <li><strong>Mayur Hiwale:</strong> Lead Developer/Back-end Lead</li>
-                <li><strong>Om Patil:</strong> Lead Developer/Front-end Lead</li>
-                <li><strong>Shashank Bhave:</strong> Front-end Developer</li>
+                <li><strong className='inline-block text-left'>Mayur Hiwale:</strong> Lead Developer & Back-end Lead</li>
+                <li><strong className='inline-block text-left'>Om Patil:</strong> Lead Developer & Front-end Lead</li>
+                <li><strong className='inline-block text-left'>Shashank Bhave:</strong> Front-end Developer</li>
             </ul>
 
             <h2>Our Vision</h2>
