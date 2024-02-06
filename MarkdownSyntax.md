@@ -310,6 +310,6 @@ Item N
 Text
 ```
 ~~~
-> **TIP:** You can also use `~~~` instead of ``(```)`` for fenced code blocks
+> **TIP:** You can also use `(~~~)` instead of ``(```)`` for fenced code blocks
 
 > **NOTE:** Use backticks ``(`)`` and not apostrophes `(')`
