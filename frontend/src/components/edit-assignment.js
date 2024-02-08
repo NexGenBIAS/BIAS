@@ -88,7 +88,7 @@ function EditAssignment() {
 
           <textarea className="markdown-editor p-4 w-full" placeholder="Edit" autoFocus value={text} onChange={handleChange} onKeyDown={handleKeyDown}></textarea>
           <div className="absolute top-0 right-0 bg-primary text-center w-[20px] h-[20px] text-sm hover:cursor-pointer">
-            <button className="help-button" onClick={handleHelpButtonClick}>?</button>
+            <button className="help-button" title="How to use" onClick={handleHelpButtonClick}>?</button>
           </div>
         </div>
         <div ref={htmlPreviewRef} className="html-preview w-1/2 " dangerouslySetInnerHTML={{ __html: markdown }}></div>
