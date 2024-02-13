@@ -76,7 +76,7 @@ const AddAssignment = () => {
         try {
             // Retrieve userName from localStorage
             const userName = localStorage.getItem('userName');
-            const key = localStorage.getItem('key') || '';
+            const key = localStorage.getItem('authKey') || '';
 
             // Make a POST request to generate the assignment
             const generateResponse = await sendRequest('http://65.0.14.141:4000/api/generate', 'POST', {
@@ -84,8 +84,8 @@ const AddAssignment = () => {
                 number: assignmentNumber,
                 qs: validQuestions,
                 username: userName,
-                type: assignmentType === 'experiment' ? `experiment${batch.toLowerCase()}` : assignmentType,
                 authKey: key,
+                type: assignmentType === 'experiment' ? `experiment${batch.toLowerCase()}` : assignmentType,
                 givendate: dateGiven,
                 submissiondate: dateSubmission,
             });
@@ -257,12 +257,12 @@ const AddAssignment = () => {
             </div>
 
             {
-                !isDownloaded ? (<button className='w-[80%] border-gray-650 border-2 p-4 rounded-lg mb-4 hover:bg-secondary transition' onClick={generateAssignment}>
+                !isDownloaded ? (<button className='w-[80%] border-gray-650 border-2 p-4 rounded-lg mb-10 hover:bg-secondary transition' onClick={generateAssignment}>
                     {isLoading ? <ProgressBar /> : 'SEND IT'}
                 </button>) : (
                     <div className='flex flex-col mb-4'>
                         <p>This version of assignment will be deleted after 5 mins!</p>
-                        <a href={`http://65.0.14.141:4000/api/view/${subject}/${!isTemp ? subject + assignmentNumber : subject + assignmentNumber + isTemp}`} className=' border-dark border-2 p-4 rounded-lg mb-4 bg-blue-500 text-center' onClick={handleDownloadClick}>
+                        <a href={`http://65.0.14.141:4000/api/view/${subject}/${!isTemp ? subject + assignmentNumber : subject + assignmentNumber + isTemp}`} className=' border-dark border-2 p-4 rounded-lg mb-4 bg-secondary text-center' onClick={handleDownloadClick}>
                             Download
                         </a>
 

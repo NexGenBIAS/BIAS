@@ -19,9 +19,7 @@
   /* 2 */
 }
 
-.about a {
-  background-color: transparent;
-}
+
 
 .about abbr[title] {
   border-bottom: none;
@@ -471,19 +469,11 @@ select {
   text-decoration: underline !important;
 }
 
-.about a {
-  color: #0000EE !important;
-  text-decoration: underline !important;
-  cursor: pointer !important;
-}
 
-.about a:active {
-  color: #FF0000 !important;
-}
 
-.about a:visited {
-  color: #551A8B !important;
-}
+
+
+
 
 .about pre {
   border-radius: 0.5rem !important;

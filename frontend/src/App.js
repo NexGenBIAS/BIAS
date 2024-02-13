@@ -28,7 +28,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/add-assignment" element={<AddAssignment />} />
-                <Route path="/edit-assignment/:subjectPrefix/:assignmentNumber" element={<EditAssignment />} />
+                <Route path="/edit/:subjectPrefix/:assignmentNumber" element={<EditAssignment />} />
               </>
             )}
           </Routes>
