@@ -43,7 +43,7 @@ const AssignmentCard = ({ assignments }) => {
           <div className='flex md:flex-col flex-row gap-2 justify-between'>
 
             <button className=" text-secondary md:px-4 py-2 px-10 rounded w-full bg-secondary border-2 border-dark  mt-2 text-secondary hover:text-primary transition hover:shadow-[5px_5px_0px_0px_rgba(102,252,241)]">
-              <a href={`http://65.0.14.141:4000/api/view/${assignment.subjectPrefix}/${assignment.number}`} target="_blank" rel="noopener noreferrer">
+              <a href={`http://65.0.14.141:4000/api/view/${assignment.subjectPrefix}/${assignment.subjectPrefix+assignment.number}`} target="_blank" rel="noopener noreferrer">
                 View
               </a>
             </button>

@@ -230,7 +230,7 @@ const AddAssignment = () => {
 
             
                     <label htmlFor='key'>Key</label>
-                    <input type="text" name="key" id="key" className='w-[80%] bg-secondary px-8 py-4 rounded-lg' value={key} onChange={handleKeyChange}/>
+                    <input type="text" placeholder="Not Required"name="key" id="key" className='w-[80%] bg-secondary px-8 py-4 rounded-lg' value={key} onChange={handleKeyChange}/>
 
 
 
