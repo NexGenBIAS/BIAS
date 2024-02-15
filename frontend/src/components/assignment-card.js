@@ -27,11 +27,11 @@ const AssignmentCard = ({ assignments }) => {
             {!hidden[key] && (
               <div className='absolute top-[45px] right-0 bg-primary border-dark border-2 p-2 rounded-md text-xs'>
                 <div className='flex flex-col gap-2'>
-                  <Link to={`/edit-assignment/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Edit File<MdOutlineModeEdit /></Link>
+                  <Link to={`/edit/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Edit File<MdOutlineModeEdit /></Link>
                   <hr className='text-secondary' />
-                  <Link to={`/edit-assignment/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Edit Details<MdModeEdit /></Link>
+                  <Link to={`/edit/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Edit Details<MdModeEdit /></Link>
                   <hr className='text-secondary' />
-                  <Link to={`/edit-assignment/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Delete <MdOutlineDeleteOutline /></Link>
+                  <Link to={`/edit/${assignment.subjectPrefix}/${assignment.number}`} className='hover:bg-secondary px-1 py-0.5 rounded flex items-center gap-2'>Delete <MdOutlineDeleteOutline /></Link>
                 </div>
               </div>
             )}
