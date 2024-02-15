@@ -40,7 +40,8 @@ const AddAssignment = () => {
     const [dateGiven, setDateGiven] = useState('');
     const [dateSubmission, setDateSubmission] = useState('NIL');
     const [key, setKey] = useState('');
-    const [batch, setBatch] = useState('B1'); 
+    const [batch, setBatch] = useState('B1');
+
 
     const onDrop = useCallback(async (acceptedFiles) => {
         setDroppedFiles(acceptedFiles);
@@ -150,29 +151,44 @@ const AddAssignment = () => {
                     </option>
                 ))}
             </select>
-            <div className='flex gap-8'>
+            <div className='flex md:gap-8 md:flex-row  sm:flex-col sm:gap-2 sm:items-center'>
                 <div className='gap-2 flex'>
 
-                <label htmlFor="radioAssignment">Assignment</label>
-                <input
-                    type="radio"
-                    name="assignmentType"
-                    id="radioAssignment"
-                    checked={assignmentType === 'assignment'}
-                    onChange={() => setAssignmentType('assignment')}
-                    
-                />
+                    <label htmlFor="radioAssignment">Assignment</label>
+                    <input
+                        type="radio"
+                        name="assignmentType"
+                        id="radioAssignment"
+                        checked={assignmentType === 'assignment'}
+                        onChange={() => setAssignmentType('assignment')}
+                        className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-[#1F2833] text-primary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#66FCF1] before:opacity-0 before:transition-opacity checked:border-dark checked:before:bg-[#66FCF1] hover:before:opacity-10"
+
+                    />
                 </div>
                 <div className='gap-2 flex'>
 
-                <label htmlFor="radioExperiment">Experiment</label>
-                <input
-                    type="radio"
-                    name="assignmentType"
-                    id="radioExperiment"
-                    checked={assignmentType === 'experiment'}
-                    onChange={() => setAssignmentType('experiment')}
-                />
+                    <label htmlFor="radioExperiment">Experiment</label>
+                    <input
+                        type="radio"
+                        name="assignmentType"
+                        id="radioExperiment"
+                        checked={assignmentType === 'experiment'}
+                        onChange={() => setAssignmentType('experiment')}
+                        className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-[#1F2833] text-primary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#66FCF1] before:opacity-0 before:transition-opacity checked:border-dark checked:before:bg-[#66FCF1] hover:before:opacity-10"
+
+                    />
+                </div>
+                <div className='gap-2 flex'>
+
+                    <label htmlFor="radioQuestionBank">Question Bank</label>
+                    <input
+                        type="radio"
+                        name="assignmentType"
+                        id="radioQuestionBank"
+                        checked={assignmentType === 'questionbank'}
+                        onChange={() => setAssignmentType('questionbank')}
+                        className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-[#1F2833] text-primary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#66FCF1] before:opacity-0 before:transition-opacity checked:border-dark checked:before:bg-[#66FCF1] hover:before:opacity-10"
+                    />
                 </div>
             </div>
 
@@ -192,8 +208,10 @@ const AddAssignment = () => {
                     </select>
                 </div>
             )}
-            {assignmentType === 'experiment' ? <label htmlFor='number'>Experiment Number</label> : <label htmlFor='number'>Assignment Number</label>}
-            
+
+
+            {assignmentType === 'experiment' ? <label htmlFor='number'>Experiment Number</label> : (assignmentType === "assignment" ? <label htmlFor='number'>Assignment Number</label> : <label htmlFor='number'>Question Bank Number</label>)}
+
             <input
                 type='number'
                 id='number'
@@ -202,20 +220,25 @@ const AddAssignment = () => {
                 onChange={handleAssignmentNumberChange}
                 required
             />
-            <div className='flex flex-col md:flex-row justify-center w-[80%] gap-6 '>
+            {
+                assignmentType !== "questionbank" && (
+                    <div className='flex flex-col md:flex-row justify-center w-[80%] gap-6 '>
 
-                <div className='text-center flex flex-col md:flex-row  gap-2 '>
+                        <div className='text-center flex flex-col md:flex-row  gap-2 '>
 
-                    <label htmlFor='date-given' className='self-center'>Date given: </label>
-                    <input required type="date" name="date-given" id="date-given" className='bg-secondary px-8 py-4 rounded-lg' value={dateGiven} onChange={handleDateGivenChange}/>
-                </div>
+                            <label htmlFor='date-given' className='self-center'>Date given: </label>
+                            <input required type="date" name="date-given" id="date-given" className='bg-secondary px-8 py-4 rounded-lg' value={dateGiven} onChange={handleDateGivenChange} />
+                        </div>
 
-                <div className='text-center flex flex-col md:flex-row gap-2'>
+                        <div className='text-center flex flex-col md:flex-row gap-2'>
 
-                    <label htmlFor='date-given' className='self-center'>Date of Submission: </label>
-                    <input type="date" name="date-given" id="date-given" className='bg-secondary px-8 py-4 rounded-lg' value={dateSubmission} onChange={handleDateSubmissionChange}/>
-                </div>
-            </div>
+                            <label htmlFor='date-given' className='self-center'>Date of Submission: </label>
+                            <input type="date" name="date-given" id="date-given" className='bg-secondary px-8 py-4 rounded-lg' value={dateSubmission} onChange={handleDateSubmissionChange} />
+                        </div>
+                    </div>
+                )
+            }
+
 
             <label className='text-secondary ' htmlFor='questions'>Type it out (1 question per line)</label>
             <textarea
@@ -228,9 +251,9 @@ const AddAssignment = () => {
                 required
             ></textarea>
 
-            
-                    <label htmlFor='key'>Key</label>
-                    <input type="text" placeholder="Not Required"name="key" id="key" className='w-[80%] bg-secondary px-8 py-4 rounded-lg' value={key} onChange={handleKeyChange}/>
+
+            <label htmlFor='key'>Key</label>
+            <input type="text" placeholder="Not Required" name="key" id="key" className='w-[80%] bg-secondary px-8 py-4 rounded-lg' value={key} onChange={handleKeyChange} />
 
 
 
